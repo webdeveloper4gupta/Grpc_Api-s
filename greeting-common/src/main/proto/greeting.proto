@@ -1,0 +1,24 @@
+//It is same as a json schema that we use to generate the java code
+syntax="proto3";
+
+package com.grpc.Grpc;
+
+option java_multiple_files = true;
+
+option java_package = "com.grpc.Grpc";
+
+
+//this will generate the class
+service GreetingService { // instead of defining controller , we will use service instead of
+//  this will be the method
+  rpc greeting(GreetingRequest) returns (GreetingResponse) { // here I implemented the rpc
+  }
+}
+
+message GreetingRequest {
+  string message = 1;
+}
+
+message GreetingResponse {
+  string message = 1;
+}
